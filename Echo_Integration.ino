@@ -22,9 +22,9 @@ ESP8266WiFiMulti WiFiMulti;
 WebSocketsClient webSocket;
 WiFiClient client;
 
-#define MyApiKey "e9db4508-a07e-4698-9a04-7eebb7436cc9" // TODO: Change to your sinric API Key. Your API Key is displayed on sinric.com dashboard
-#define MySSID "AKASH" // TODO: Change to your Wifi network SSID
-#define MyWifiPassword "tomar@123" // TODO: Change to your Wifi network password
+#define MyApiKey "#####" // TODO: Change to your sinric API Key. Your API Key is displayed on sinric.com dashboard
+#define MySSID "#####" // TODO: Change to your Wifi network SSID
+#define MyWifiPassword "#####" // TODO: Change to your Wifi network password
 
 #define HEARTBEAT_INTERVAL 300000 // 5 Minutes 
 
@@ -35,49 +35,49 @@ bool isConnected = false;
 // deviceId is the ID assgined to your smart-home-device in sinric.com dashboard. Copy it from dashboard and paste it here
 
 void turnOn(String deviceId) {
-  if (deviceId == "5d77cdaff1dce8012dfd4779") // Device ID of Light device
+  if (deviceId == "#####") // Device ID of Light device
   {  
     Serial.print("Turn on device id: ");
     Serial.println(deviceId);
     digitalWrite(relayOne, LOW);
   } 
-  else if (deviceId == "5d77cdc5f1dce8012dfd4781") // Device ID of Bulb device
+  else if (deviceId == "#####") // Device ID of Bulb device
   { 
     Serial.print("Turn on device id: ");
     Serial.println(deviceId);
     digitalWrite(relayTwo, LOW);
   }
-    else if (deviceId == "5d7904e6f1dce8012dfda81f") // Device ID of Fan device
+    else if (deviceId == "#####") // Device ID of Fan device
   { 
     Serial.print("Turn on device id: ");
     Serial.println(deviceId);
     digitalWrite(relayThree, LOW);
   }
-    else if (deviceId == "5d77cdeef1dce8012dfd4791") // Device ID of Copper Light device
+    else if (deviceId == "#####") // Device ID of Copper Light device
   { 
     Serial.print("Turn on device id: ");
     Serial.println(deviceId);
     digitalWrite(relayFour, LOW);
   }
-    else if (deviceId == "5d77ce01f1dce8012dfd4799") // Device ID of Window Light device
+    else if (deviceId == "#####") // Device ID of Window Light device
   { 
     Serial.print("Turn on device id: ");
     Serial.println(deviceId);
     digitalWrite(relayFive, LOW);
   }
-    else if (deviceId == "5d77ce16f1dce8012dfd47a1") // Device ID of Central Light device
+    else if (deviceId == "#####") // Device ID of Central Light device
   { 
     Serial.print("Turn on device id: ");
     Serial.println(deviceId);
     digitalWrite(relaySix, LOW);
   }
-    else if (deviceId == "5d77ce27f1dce8012dfd47a9") // Device ID of Focus Light device
+    else if (deviceId == "#####") // Device ID of Focus Light device
   { 
     Serial.print("Turn on device id: ");
     Serial.println(deviceId);
     digitalWrite(relayEight, LOW);
   }
-    else if (deviceId == "5d77ce38f1dce8012dfd47ae") // Device ID of Studio device
+    else if (deviceId == "#####") // Device ID of Studio device
   { 
     Serial.print("Turn on device id: ");
     Serial.println(deviceId);
@@ -90,7 +90,7 @@ void turnOn(String deviceId) {
     digitalWrite(relaySeven, LOW);
     digitalWrite(relayEight, LOW);
   }
-   else if (deviceId == "5d77ce4ef1dce8012dfd47b6") // Device ID of Everything device
+   else if (deviceId == "#####") // Device ID of Everything device
   { 
     Serial.print("Turn on device id: ");
     Serial.println(deviceId);
@@ -103,7 +103,7 @@ void turnOn(String deviceId) {
     digitalWrite(relaySeven, LOW);
     digitalWrite(relayEight, LOW);
   }
-   else if (deviceId == "5d790518f1dce8012dfda82e") // Device ID of Sleeping Mode device
+   else if (deviceId == "#####") // Device ID of Sleeping Mode device
   { 
     Serial.print("Turn on device id: ");
     Serial.println(deviceId);
@@ -123,49 +123,49 @@ void turnOn(String deviceId) {
 }
 
 void turnOff(String deviceId) {
-   if (deviceId == "5d77cdaff1dce8012dfd4779") // Device ID of Light device
+   if (deviceId == "#####") // Device ID of Light device
    {  
      Serial.print("Turn off Device ID: ");
      Serial.println(deviceId);
      digitalWrite(relayOne, HIGH);
    }
-   else if (deviceId == "5d77cdc5f1dce8012dfd4781") // Device ID of Bulb device
+   else if (deviceId == "#####") // Device ID of Bulb device
    { 
      Serial.print("Turn off Device ID: ");
      Serial.println(deviceId);
      digitalWrite(relayTwo, HIGH);
   }
-  else if (deviceId == "5d7904e6f1dce8012dfda81f") // Device ID of Fan device
+  else if (deviceId == "#####") // Device ID of Fan device
    { 
      Serial.print("Turn off Device ID: ");
      Serial.println(deviceId);
      digitalWrite(relayThree, HIGH);
   }
-  else if (deviceId == "5d77cdeef1dce8012dfd4791") // Device ID of Copper Light device
+  else if (deviceId == "#####") // Device ID of Copper Light device
    { 
      Serial.print("Turn off Device ID: ");
      Serial.println(deviceId);
      digitalWrite(relayFour, HIGH);
   }
-  else if (deviceId == "5d77ce01f1dce8012dfd4799") // Device ID of Window Light device
+  else if (deviceId == "#####") // Device ID of Window Light device
    { 
      Serial.print("Turn off Device ID: ");
      Serial.println(deviceId);
      digitalWrite(relayFive, HIGH);
   }
-  else if (deviceId == "5d77ce16f1dce8012dfd47a1") // Device ID of Central Light device
+  else if (deviceId == "#####") // Device ID of Central Light device
    { 
      Serial.print("Turn off Device ID: ");
      Serial.println(deviceId);
      digitalWrite(relaySix, HIGH);
   }
-  else if (deviceId == "5d77ce27f1dce8012dfd47a9") // Device ID of Focus Light device
+  else if (deviceId == "#####") // Device ID of Focus Light device
    { 
      Serial.print("Turn off Device ID: ");
      Serial.println(deviceId);
      digitalWrite(relayEight, HIGH);
   }
-  else if (deviceId == "5d77ce38f1dce8012dfd47ae") // Device ID of Studio device
+  else if (deviceId == "#####") // Device ID of Studio device
    { 
      Serial.print("Turn off Device ID: ");
      Serial.println(deviceId);
@@ -178,7 +178,7 @@ void turnOff(String deviceId) {
     digitalWrite(relaySeven, HIGH);
     digitalWrite(relayEight, HIGH);
   }
-  else if (deviceId == "5d77ce4ef1dce8012dfd47b6") // Device ID of Everything device
+  else if (deviceId == "#####") // Device ID of Everything device
    { 
      Serial.print("Turn off Device ID: ");
      Serial.println(deviceId);
@@ -191,7 +191,7 @@ void turnOff(String deviceId) {
     digitalWrite(relaySeven, HIGH);
     digitalWrite(relayEight, HIGH);
   }
-  else if (deviceId == "5d790518f1dce8012dfda82e") // Device ID of Sleeping Mode device
+  else if (deviceId == "#####") // Device ID of Sleeping Mode device
    { 
      Serial.print("Turn off Device ID: ");
      Serial.println(deviceId);
